@@ -7,16 +7,16 @@ public class Marks {
     if(marks>90){
         System.out.println("Grade A");
     }
-    else if(90>80){
+    else if(marks>80){
         System.out.println("Grade B");
     }
-    else if(80>70){
+    else if(marks>70){
         System.out.println("Grade C");
     }
-    else if(70>60){
+    else if(marks>60){
         System.out.println("Grade D");
     }
-    else if(60>50){
+    else if(marks>50){
         System.out.println("Grade E");
     }
     else{
