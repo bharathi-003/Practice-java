@@ -1,26 +1,14 @@
-import java.util.*;
 public class Marks {
- public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-    System.out.print("Marks:");
-    int marks=sc.nextInt();
-    if(marks>90){
-        System.out.println("Grade A");
+    public static void main(String[] args) {
+        int Marks1=60;
+        int Marks2=70;
+        int Marks3=30;
+        int Marks4=80;
+        int Marks5=90;
+        int Marks[]={60,70,30,80,90};
+        System.out.println(Marks[2]);
+        System.out.println(Marks[1]);
+        Marks[0]=67;
+        System.out.println(Marks[0]);
     }
-    else if(marks>80){
-        System.out.println("Grade B");
-    }
-    else if(marks>70){
-        System.out.println("Grade C");
-    }
-    else if(marks>60){
-        System.out.println("Grade D");
-    }
-    else if(marks>50){
-        System.out.println("Grade E");
-    }
-    else{
-        System.out.println("fail");
-    }
- }   
 }
