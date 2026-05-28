@@ -1,0 +1,49 @@
+import java.util.*;
+
+class Solution {
+    static class Node { Node[] c = new Node[26]; int best = -1; }
+    Node root = new Node(); String[] w;
+
+    public int[] stringIndices(String[] wc, String[] wq) {
+        w = wc; build(wc);
+        int[] ans = new int[wq.length];
+        for (int i = 0; i < wq.length; i++) ans[i] = query(wq[i]);
+        return ans;
+    }
+
+    void build(String[] a) {
+        root.best = min(a);
+        for (int i = 0; i < a.length; i++) {
+            Node n = root;
+            for (char ch : new StringBuilder(a[i]).reverse().toString().toCharArray()) {
+                int k = ch - 'a';
+                if (n.c[k] == null) n.c[k] = new Node();
+                n = n.c[k]; update(n, i);
+            }
+        }
+    }
+
+    void update(Node n, int i) {
+        if (n.best == -1) n.best = i;
+        else {
+            String A = w[n.best], B = w[i];
+            if (B.length() < A.length() || (B.length() == A.length() && i < n.best)) n.best = i;
+        }
+    }
+
+    int query(String q) {
+        Node n = root; int b = root.best;
+        for (char ch : new StringBuilder(q).reverse().toString().toCharArray()) {
+            int k = ch - 'a'; if (n.c[k] == null) break;
+            n = n.c[k]; b = n.best;
+        }
+        return b;
+    }
+
+    int min(String[] a) {
+        int b = 0;
+        for (int i = 1; i < a.length; i++)
+            if (a[i].length() < a[b].length() || (a[i].length() == a[b].length() && i < b)) b = i;
+        return b;
+    }
+}
