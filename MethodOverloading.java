@@ -1,26 +1,8 @@
-class Calculation{
-    void greatest(int a,int b){
-        if(a>b){
-            System.out.println(a);
-        }
-        else{
-            System.out.println(b);
-        }
+public class MethodOverloading{
+    static void addition(int a,int b) {
+        int sum=a+b;
+        System.out.println(a+b+sum);
     }
-    void greatest(double a,double b){
-        if(a>b){
-            System.out.println(a);
-        }
-        else{
-            System.out.println(b);
-        }
-    }
-}
-
-public class MethodOverloading {
-    public static void main(String[] args) {
-        Calculation c=new Calculation();
-        c.greatest(10,20);
-        c.greatest(10.0, 20.0);
-    }
+     static void addition(int a,int b,int c) {
+        
 }
