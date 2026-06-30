@@ -1,19 +1,24 @@
-class Student{
-    String name;
-    int age;
-    double cgpa;
-    void display(){
-        System.out.println("Name:"+name);
-        System.out.println("Age:"+age);
-        System.out.println("CGPA:"+cgpa);
+import java.util.*;
+class Car{
+    String color;
+    int Maxspeed;
+    int acceleration;
+    int tyreFriction;
+    Car(String z,int x,int c,int v){
+        color=z;
+        Maxspeed=x;
+        acceleration=c;
+        tyreFriction=v;
     }
 }
-public class Exercise{
+class Exercise{
     public static void main(String[] args) {
-        Student s1=new Student();
-        s1.name="Bharathi";
-        s1.age=20;
-        s1.cgpa=7.5;
-        s1.display();
+        Scanner input=new Scanner(System.in);
+        Car car=new Car(input.next(),input.nextInt(),input.nextInt(),input.nextInt());
+        System.out.println(car.color);
+        System.out.println(car.Maxspeed);
+        System.out.println(car.acceleration);
+        System.out.println(car.tyreFriction);
+        input.close();
     }
 }

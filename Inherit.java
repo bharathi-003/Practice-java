@@ -1,0 +1,32 @@
+class Mammal {
+    String name;
+
+    Mammal(String name) {
+        this.name = name;
+    }
+
+    void eat() {
+        System.out.println("I am eating");
+    }
+}
+
+class Horse extends Mammal {
+
+    Horse(String name) {
+        super(name);
+    }
+
+    void displayName() {
+        System.out.println("My name is " + name);
+    }
+}
+public class Inherit{
+    public static void main(String[] args) {
+
+        Horse arabianHorse = new Horse("Alex");
+
+        arabianHorse.displayName();
+        arabianHorse.eat();
+    }
+
+}
