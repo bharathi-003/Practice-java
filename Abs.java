@@ -1,22 +1,14 @@
-import java.util.*;
-abstract class picture{
-    abstract void area(int side);
-    void fun(){
-        System.out.println("Java program");
+abstract class Vehile{
+    abstract void Start();
+}
+class Car extends Vehile{
+    void Start(){
+        System.out.println("yamaha Engine");
     }
 }
-class square extends picture{
-    void area(int side){
-        System.out.println(side*side);
-    }
-
-}
-public class Abs {
+    public class Abs{
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int side =sc.nextInt();
-        square s=new square();
-        s.area(side);
-        s.fun(); 
+        Car c=new Car();
+        c.Start();
     }
 }
