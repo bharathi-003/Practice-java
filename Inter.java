@@ -1,15 +1,14 @@
-interface A {
-    void display();
+interface Animal{
+    void sound();
 }
-class B implements A{
-    public void display(){
-        System.out.println("Pure Abstraction");
+class Dog implements Animal{
+    public void sound(){
+        System.out.println("Dog barks");
     }
 }
-
-public class Inter {
+public class Inter{
     public static void main(String[] args) {
-        B obj=new B();
-        obj.display();
+        Dog d=new Dog();
+        d.sound();
     }
 }
