@@ -1,0 +1,4 @@
+Name: John
+Age: 20
+Dept: IT
+Marks:95
