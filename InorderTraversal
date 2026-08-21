@@ -1,0 +1,25 @@
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+
+        List<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        while (root != null || !stack.isEmpty()) {
+
+            // Step 1: Go to the leftmost node
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+
+            // Step 2: Get the node from stack
+            root = stack.pop();
+            result.add(root.val);
+
+            // Step 3: Go to the right
+            root = root.right;
+        }
+
+        return result;
+    }
+}
