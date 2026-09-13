@@ -1,0 +1,34 @@
+class Solution {
+    public int divide(int dividend, int divisor) {
+
+        // Overflow case
+        if (dividend == Integer.MIN_VALUE && divisor == -1) {
+            return Integer.MAX_VALUE;
+        }
+
+        boolean negative = false;
+
+        if (dividend < 0) {
+            negative = !negative;
+            dividend = -dividend;
+        }
+
+        if (divisor < 0) {
+            negative = !negative;
+            divisor = -divisor;
+        }
+
+        int count = 0;
+
+        while (dividend >= divisor) {
+            dividend = dividend - divisor;
+            count++;
+        }
+
+        if (negative) {
+            return -count;
+        }
+
+        return count;
+    }
+}
