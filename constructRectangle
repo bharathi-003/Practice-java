@@ -1,0 +1,17 @@
+class Solution {
+    public int[] constructRectangle(int area) {
+        int L=area;
+        int W=1;
+        for(int i=1;i<=area;i++){
+            if(area%i==0){
+                int length=area/i;
+            if(length>=i && length-i < L-W){
+                    L=length;
+                    W=i;
+            }
+            }
+        }
+        return new int[]{L,W};
+
+    }
+}
