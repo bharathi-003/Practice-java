@@ -1,0 +1,26 @@
+abstract class Bank{
+    abstract void getInterestRate();
+    void bankName(){
+        System.out.println("Welcome to the Bank");
+    }
+}
+class SBI extends Bank{
+   void getInterestRate(){
+       System.out.println("SBI Intrest Rate:7%");
+   }
+}
+class HDFC extends Bank{
+   void getInterestRate(){
+       System.out.println("HDFC Intrest Rate:7.5%");
+   }
+}
+class Main {
+    public static void main(String[] args) {
+       SBI b1=new SBI();
+        HDFC b2=new HDFC();
+        b1.bankName();
+        b1.getInterestRate();
+        b1.bankName();
+        b2.getInterestRate();
+    }
+}
