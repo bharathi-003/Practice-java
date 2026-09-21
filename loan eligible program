@@ -1,0 +1,22 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int Salary=sc.nextInt();
+        int age=sc.nextInt();
+        if(Salary>=20000 || age<25){
+            System.out.println("eligible");
+            int loan=sc.nextInt();
+        if(loan<50000){
+            System.out.println("loan ok");
+        }
+            else{
+                System.out.println("not ok loan");
+            }
+        }
+        
+        else {
+            System.out.println("you not eligible");
+        }
+    }
+}
