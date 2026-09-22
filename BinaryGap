@@ -1,0 +1,31 @@
+class Solution {
+    public int binaryGap(int n) {
+
+        int maxGap = 0;
+        int gap = 0;
+        boolean foundOne = false;
+
+        while (n > 0) {
+
+            if ((n & 1) == 1) {
+
+                if (foundOne) {
+                    maxGap = Math.max(maxGap, gap + 1);
+                }
+
+                foundOne = true;
+                gap = 0;
+
+            } else {
+
+                if (foundOne) {
+                    gap++;
+                }
+            }
+
+            n = n >> 1;
+        }
+
+        return maxGap;
+    }
+}
