@@ -1,0 +1,47 @@
+class Animal {
+    String name;
+
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    String breed;
+
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks");
+    }
+
+    void fetch() {
+        System.out.println("Dog is fetching");
+    }
+}
+class Cat extends Animal{
+    String color;
+    @Override
+    void makeSound(){
+        System.out.println("Cat Meows");
+    }
+    void climb(){
+        System.out.println("Cat is climbing");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d1 = new Dog();
+        d1.name = "Rio";
+        d1.breed = "Husky";
+
+        d1.makeSound();
+        d1.fetch();
+        System.out.println(d1.breed);
+        Cat c1=new Cat();
+        c1.makeSound();
+        c1.color="white";
+        System.out.println(c1.color);
+        c1.climb();
+    }
+}
