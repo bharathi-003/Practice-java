@@ -1,0 +1,24 @@
+class Person{
+    String name;
+    Person(String a){
+        name=a;
+    }
+}
+class Employee extends Person{
+    int EmployeeId;
+     Employee() {
+        super("Naruto");
+    }
+    void method(){
+        System.out.println(EmployeeId);
+    }
+
+}
+public class SuperKeyword{
+    public static void main(String[] args) {
+      Employee e1=new Employee();
+      e1.EmployeeId=23;
+      System.out.println(e1.EmployeeId);  
+      System.out.println(e1.name);
+    }
+}
