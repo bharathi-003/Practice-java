@@ -1,0 +1,42 @@
+
+
+class person{
+    public String name;
+    protected int age;
+    private int Securitynumber;
+    String address;
+
+    person(String name,int age,int sn,String add) {
+        this.name=name;
+        this.age=age;
+        this.Securitynumber=sn;
+        this.address=add;
+    }
+    void show(){
+        Securitynumber=12345678;
+        System.out.println(Securitynumber);
+    }
+    
+}
+
+class Employee extends person{
+
+     Employee(String name,int age,int sn,String add) {
+        super(name,age,sn,add);
+        System.out.println("Hello Employee");
+    }
+        
+}
+
+
+public class Problem1{
+    public static void main(String[] args) {
+        Employee e1=new Employee("Tanjiro",17,1234,"japan");
+        System.out.println(e1.name);
+        System.out.println(e1.age);
+        System.out.println(e1.address);
+        e1.show();
+
+        
+    }
+}
