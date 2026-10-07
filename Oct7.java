@@ -1,5 +1,5 @@
 
-class Solution {
+class Oct7 {
     public int numOfSubarrays(int[] arr) {
         int MOD = 1000000007;
 
